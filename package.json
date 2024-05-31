@@ -1,0 +1,30 @@
+{
+  "name": "github-pull-request-naming-policy-action",
+  "version": "1.0.0",
+  "description": "A GitHub Action to verify if a pull request title or body contains a valid regex pattern.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx @vercel/ncc build index.js --out dist --license licenses.txt --quiet --minify"
+  },
+  "author": {
+    "name": "GitHub Expert Services",
+    "email": "services@github.com",
+    "url": "https://services.github.com"
+  },
+  "contributors": [
+    {
+      "name": "Nick Nagel",
+      "email": "nicklegan@github.com",
+      "url": "https://github.com/nicklegan"
+    }
+  ],
+  "repository": "github:nicklegan/github-pull-request-naming-policy-action",
+  "engines": {
+    "node": ">=20",
+    "npm": ">=10"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@actions/core": "^1.10.1"
+  }
+}

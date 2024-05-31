@@ -1,0 +1,30 @@
+name: GitHub Pull Request Naming Policy Action
+description: 'A GitHub Action to verify if a pull request title or body contains a valid regex pattern.'
+
+inputs:
+  title-regex:
+    description: 'A regex string matching a valid pull request title'
+    required: false
+  title-flags:
+    description: 'Flag for issue title regex string. e.g. i for case-insensitive.'
+    required: false
+  title-error-message:
+    description: 'Error message to display why the regex does not match the pull request title'
+    required: false
+  body-regex:
+    description: 'A regex string matching a valid pull request body'
+    required: false
+  body-flags:
+    description: 'Flag for issue body regex string. e.g. i for case-insensitive.'
+    required: false
+  body-error-message:
+    description: 'Error message to display why the regex does not match the pull request body'
+    required: false
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
+
+branding:
+  icon: 'check-circle'
+  color: 'blue'
